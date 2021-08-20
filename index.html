@@ -20,17 +20,25 @@
     <h3>Sign Up</h3>
     <input type="text" id="regEmail" placeholder="Email"></input>
     <input type="text" id="regUsername" placeholder="Username"></input>
-    <input type="text" id="regPassword" placeholder="Password"></input>
+    <input type="password" id="regPassword" placeholder="Password"></input>
+    <button onclick=attemptSignUp()>Register</button>
     <p id="register-response"></p>
 
     <h3>Sign In</h3>
     <input type="text" id="signinUsername" placeholder="Username"></input>
-    <input type="text" id="signinPassword" placeholder="Password"></input>
-    <p id="welcome"></p>
+    <input type="password" id="signinPassword" placeholder="Password"></input>
+    <button onclick=attemptSignIn()>Submit</button>
+    <p id="signin-response"></p>
 
     <h3>Your Notes</h3>
     <ul id="notes">
     </ul>
+    <input type="text" id="noteToAdd" placeholder="Message"></input>
+    <button onclick=postNote()>Add Note</button>
+    <p id="postNote-response"></p>
+    <input type="text" id="noteToDelete" placeholder="Note ID"></input>
+    <button onclick=deleteNote()>Delete Note</button>
+    <p id="deleteNote-response"></p>
   </body>
   <script src='./client/main.js'></script>
 </html>

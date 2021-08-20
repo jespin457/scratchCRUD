@@ -22,4 +22,8 @@ apiRouter.post('/postNote', apiController.postUserNote, (req, res) => {
   return res.status(200).set('Content-Type', 'application/json').json(res.locals.postedNote);
 });
 
+apiRouter.delete('/deleteNote/:note_id', apiController.deleteUserNote, (req, res) => {
+  return res.status(200).set('Content-Type', 'application/json').json(res.locals.deletedNote);
+});
+
 module.exports = apiRouter;

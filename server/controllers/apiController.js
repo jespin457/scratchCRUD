@@ -29,7 +29,7 @@ const apiController = {
       if (err) {
         return next(err);
       }
-
+      res.cookie('user_id', queryResponse.rows[0]._id, {expires: new Date(Date.now() + 60000)});
       res.locals.signinRes = queryResponse.rows[0];
       return next();
     });
@@ -64,12 +64,27 @@ const apiController = {
         return next(err);
       }
 
-      res.locals.postedNote = queryResponse.rows;
+      res.locals.postedNote = queryResponse.rows[0];
       return next();
     });
   },
 
-  // async deleteUserNote
+  async deleteUserNote(req, res, next) {
+    const query = `DELETE FROM messages
+    WHERE _id = $1
+    RETURNING *`
+
+    const values = [req.params.note_id];
+
+    await db.query(query, values, (err, queryResponse) => {
+      if (err) {
+        return next(err);
+      }
+
+      res.locals.deletedNote = queryResponse.rows[0];
+      return next();
+    });
+  },
 }
 
 module.exports = apiController;
