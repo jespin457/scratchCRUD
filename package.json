@@ -1,0 +1,25 @@
+{
+  "name": "scratchcrud",
+  "version": "1.0.0",
+  "description": "read the readme lol",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jespin457/scratchCRUD.git"
+  },
+  "author": "Jorge Espinoza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jespin457/scratchCRUD/issues"
+  },
+  "homepage": "https://github.com/jespin457/scratchCRUD#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^16.6.1",
+    "postgres": "^1.0.2"
+  }
+}
