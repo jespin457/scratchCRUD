@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const apiRouter = require(path.resolve(__dirname, './routes/apiRouter'));
+const apiRouter = require(path.resolve(__dirname, './routers/apiRouter.js'));
 
 //PARSES URL ROUTE INTO req.params OR req.query ||| PARSES JSON INTO JS OBJECTS
 app.use(express.urlencoded({ extended: true }));
