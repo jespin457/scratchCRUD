@@ -112,6 +112,7 @@ function postNote() {
       let list_item = document.createElement("li");
       let message = document.createTextNode(`${postNoteRes.message} [Note ID: ${postNoteRes._id}]`);
       list_item.appendChild(message);
+      list_item.id = `note_id${postNoteRes._id}`;
       document.getElementById("notes").appendChild(list_item);
     } else {
       document.getElementById("postNote-response").innerHTML = 'Error occured!';
