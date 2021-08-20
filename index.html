@@ -1,16 +1,35 @@
 <html>
   <head>
+    <!-- Supplementary js files would go here -->
     <title>Simple CRUD App</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
-    body {
-      font-family: 'Rubik', sans-serif;
-    }
+      body {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 300;
+      }
     </style>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
   </head>
   <body>
-    <h1>You should see this.</h1>
-    <p>Jesus I'm dumb lmao</p>
+    <h1>Simple Notes</h1>
+
+    <hr></hr>
+
+    <h3>Register Account</h3>
+    <input type="text" placeholder="Email"></input>
+    <input type="text" placeholder="Username"></input>
+    <input type="text" placeholder="Password"></input>
+    <p id="register-response"></p>
+
+    <h3>Sign In</h3>
+    <input type="text" placeholder="Username"></input>
+    <input type="text" placeholder="Password"></input>
+    <p id="welcome"></p>
+
+    <h3>Your Notes</h3>
+    <div id="notes"></div>
+    <!-- client/index.js would go here -->
   </body>
 </html>

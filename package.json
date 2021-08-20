@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "node": "^16.6.1",
+    "pg": "^8.7.1",
     "postgres": "^1.0.2"
   }
 }
