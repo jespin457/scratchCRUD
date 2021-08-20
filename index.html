@@ -17,19 +17,20 @@
 
     <hr></hr>
 
-    <h3>Register Account</h3>
-    <input type="text" placeholder="Email"></input>
-    <input type="text" placeholder="Username"></input>
-    <input type="text" placeholder="Password"></input>
+    <h3>Sign Up</h3>
+    <input type="text" id="regEmail" placeholder="Email"></input>
+    <input type="text" id="regUsername" placeholder="Username"></input>
+    <input type="text" id="regPassword" placeholder="Password"></input>
     <p id="register-response"></p>
 
     <h3>Sign In</h3>
-    <input type="text" placeholder="Username"></input>
-    <input type="text" placeholder="Password"></input>
+    <input type="text" id="signinUsername" placeholder="Username"></input>
+    <input type="text" id="signinPassword" placeholder="Password"></input>
     <p id="welcome"></p>
 
     <h3>Your Notes</h3>
-    <div id="notes"></div>
-    <!-- client/index.js would go here -->
+    <ul id="notes">
+    </ul>
   </body>
+  <script src='./client/main.js'></script>
 </html>
