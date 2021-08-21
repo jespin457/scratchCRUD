@@ -29,7 +29,13 @@ const apiController = {
       if (err) {
         return next(err);
       }
-      res.cookie('user_id', queryResponse.rows[0]._id, {expires: new Date(Date.now() + 60000)});
+
+      if (queryResponse.rows.length === 0) {
+        res.locals.signinRes = {signinattempt: 'failed'};
+        return next();
+      }
+
+      res.cookie('user_id', queryResponse.rows[0]._id, {expires: new Date(Date.now() + 60000), sameSite: true});
       res.locals.signinRes = queryResponse.rows[0];
       return next();
     });
