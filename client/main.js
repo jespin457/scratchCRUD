@@ -64,6 +64,12 @@ function attemptSignIn() {
 }
 
 function getNotes() {
+  //Removes all notes before getting notes in order to prevent making copies of all notes each sign in
+  const notesContainer = document.getElementById("notes");
+  while (notesContainer.firstChild) {
+    notesContainer.removeChild(notesContainer.lastChild);
+  }
+
   const cookiesSplit = document.cookie.split(';')
   const user_id = Number(cookiesSplit[0][8]);
   
